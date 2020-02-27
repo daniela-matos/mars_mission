@@ -10,9 +10,11 @@ pandas = "*"
 requests = "*"
 ipykernel = "*"
 nb-black = "*"
-beautifulsoup4 = "*"
 pymongo = "*"
 flask = "*"
+bs4 = "*"
+splinter = "*"
+lxml = "*"
 
 [requires]
 python_version = "3.7"
