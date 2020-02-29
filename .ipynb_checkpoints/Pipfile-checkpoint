@@ -13,7 +13,13 @@ nb-black = "*"
 pymongo = "*"
 flask = "*"
 bs4 = "*"
-
+splinter = "*"
+lxml = "*"
+numpy = "*"
+html5lib = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
