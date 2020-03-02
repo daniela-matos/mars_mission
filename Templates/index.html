@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Mission to Mars</title>
+  </head>
+  <body class="text-white" style="background-color: black;">
+    <div class="container">
+        <!-- Jumbotron -->
+        <div class="jumbotron text-center" style="background-image: url(https://www.adorama.com/alc/wp-content/uploads/2018/07/telescope-sky-stars-planets-825x465@2x.jpg); height: 600px; background-position: center; background-size: cover;">
+            <h1 class="display-3"><b>Mission to Mars</b></h1>
+            <p><a class="btn btn-warning btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+       
+          <!-- Mars Weather -->
+          <div class="col-lg-6 col-md-6 col-sm-12" id="mars-weather">
+            <div class="card-body" style="max-width: 100rem; text-align: left">
+                <div class="card-img-overlay">
+                  <br>
+                    <h4 class="card-title">Current Weather on Mars</h4>
+                    <p class="card-text">{{mars.weather}}</p>
+                </div>
+            </div>  
+        </div> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+         
+          <!-- NASA Mars News -->
+        <div class="col-lg-12 col-md-12 col-sm-12" id="mars-news">
+          <div class="card-body"  style="max-width: 400rem; text-align: left">
+            <div class="card-img-overlay">
+            <br>
+            <br>
+              <h4 class="card-text">{{mars.news}}</h4>
+              <p class="card-text">{{mars.teaser}}</p>
+            </div>
+          </div>  
+        </div>
+      </div>
+    <br>
+    <!-- JPL Mars Space Images and Mars Facts Table -->
+    <div class="d-flex text-white mt-1">
+      <div class="row" id="mars-featured-image">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h4>Featured Mars Image</h4>
+          <br>
+            <img class="rounded" src="{{mars.image_url}}" class="img-responsive" style="max-width:100%; max-height: auto;" alt="Mars Featured Image"/>
+        </div>
+      <div class="p-2 flex-grow-1"> 
+    </div>  
+      <div class="row" id="mars-table">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+           <h4 >Mars Facts</h4>
+           <br>
+           {{mars.facts | safe}}
+        </div>
+      </div>
+    </div>
+    </div>
+  <br>
+  <!-- Mars Hemispheres -->
+    <div class="row"; style="text-align:center">
+      <h4 style="color:white" style="text-align:center">Mars Hemispheres</h4>
+    </div>
+    <div class="col-md-12">
+      <div class="row" id="mars-hemispheres">
+        {% for hemisphere in mars.hemispheres %}
+        <div class="col-md-6">
+          <div class="card text-white bg-warning" style="margin: 30px;">
+              <img class="card-img-top" src="{{hemisphere.Img_url}}}}" />
+              <div class="card-body">
+                <p class="card-text">{{hemisphere.Title}}</p>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+
+  
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

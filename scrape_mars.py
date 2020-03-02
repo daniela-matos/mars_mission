@@ -85,7 +85,7 @@ def scrape():
     mars_weather = soup.find_all("div", class_="js-tweet-text-container")
 
     # find the first actual weather tweet
-    mars_weather = mars_weather[0].text
+    mars_weather = mars_weather[0].text[:-26]    
 
     # print(f"The weather today in Mars is: {mars_weather}")
 
@@ -147,7 +147,7 @@ def scrape():
     # create dict of all mars info
 
     # Store all the scrapped data in a dictionary
-    mars_data = {
+    mars_dict = {
         "news": news_title,
         "teaser": teaser,
         "image_url": featured_image_url,
@@ -157,5 +157,6 @@ def scrape():
     }
 
     # Return the scrapped data dictionary
-    return mars_data
+    return mars_dict
 
+#print(scrape())

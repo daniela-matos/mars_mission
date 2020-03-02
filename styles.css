@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 3.2;
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(196, 192, 192, 0.125);
+  border-radius: 0.25rem;
+}
+
+.bg-primary {
+  background-color: #242323 !important;
+}
