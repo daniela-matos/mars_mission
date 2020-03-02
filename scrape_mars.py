@@ -85,7 +85,7 @@ def scrape():
     mars_weather = soup.find_all("div", class_="js-tweet-text-container")
 
     # find the first actual weather tweet
-    mars_weather = mars_weather[0].text[:-26]    
+    mars_weather = mars_weather[0].text[:-26]
 
     # print(f"The weather today in Mars is: {mars_weather}")
 
@@ -139,7 +139,7 @@ def scrape():
         time.sleep(2)
         driver.back()
 
-    #pprint.pprint(hemisphere_dict)
+    # pprint.pprint(hemisphere_dict)
 
     # Close the browser
     driver.close()
@@ -159,4 +159,5 @@ def scrape():
     # Return the scrapped data dictionary
     return mars_dict
 
-#print(scrape())
+
+# print(scrape())
