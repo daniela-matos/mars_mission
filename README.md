@@ -1,10 +1,10 @@
 # Mars Facts Web Application
 
-In this project I used Jupyter Lab to do all the code for web scraping. Then I converted the notebook into a Python script, and added a function that returns one Python dictionary with all the scraping. 
-After that, I stored the Python dictionary in MongoDB and created a HTML template to display all the data.
-The app.py file is a flask application that is a single page app that allows the user to view all the scraped data. Once the app is opened, the user can click a button and view the current weather in Mars, the latest Mars News from NASA's twitter page, the featured Mars image, a table with Mars facts and images of Mars' Hemispheres.
+This project used Jupyter Lab to create and test the code for web scraping and then it was converted  into a Flask web application. 
+The application stores a dictionary in a Mongo database containing the scrapping data and creates a page from an Bootstrap HTML template to display all the data.
+The app.py file is the Flask single page application that that allows the user to view all the scraped data. Once the page is opened, the user can click the button "Scrape New Data" to receive current weather in Mars, atest Mars related from NASA's Twitter page, featured Mars image and a table with Mars facts and images its hemispheres.
 
-#### 1 - Scraping various websites:
+#### 1 - Scrape various websites:
 
  * Python:
       * requests.get(), 
@@ -15,7 +15,7 @@ The app.py file is a flask application that is a single page app that allows the
       * chromedriver,
       * geckodriver
       
- #### 2 - Storing the scraped data: 
+ #### 2 - Store and manipulate scraped data: 
  
   * Python:
       * Pymongo
