@@ -11,12 +11,12 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
 
 # Flask Routes
 
-# Query MongoDB and pass Ma
+# Query MongoDB 
 @app.route("/")
 def home():
     # Find one record of data from the mongo database
     mars = mongo.db.collection.find_one()    
-    # Return template and data
+    # Return template and data - the index.html must be in Templates folder
     return render_template("index.html", mars=mars)
 
 # Call scrape function from scrape_mars.
